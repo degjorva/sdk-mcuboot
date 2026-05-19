@@ -992,7 +992,7 @@ int main(void)
 /* Lock back PCD used for CPUNET application udapte */
 #if defined(CONFIG_SOC_NRF5340_CPUAPP) && CONFIG_MCUBOOT_NETWORK_CORE_IMAGE_NUMBER != -1 && \
     defined(CONFIG_PCD_APP)
-#if defined(PM_TFM_SECURE_ADDRESS)
+#if defined(CONFIG_BUILD_WITH_TFM)
     pcd_lock_ram(false);
 #else
     pcd_lock_ram(true);
